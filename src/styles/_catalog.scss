@@ -1,8 +1,12 @@
 .catalog {
+  $gap :48px;
+
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   justify-content: center;
-  gap: 48px;
+  gap: $gap;
+  padding-left: $gap;
+  padding-bottom: $gap;
 
   @media (min-width: 1px ) {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
@@ -27,10 +31,6 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    // margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }
